@@ -2,6 +2,7 @@
 import { makeStyles } from '@material-ui/styles'
 // Local Imports
 import Calender from './Components/Calender/Calnder'
+import Carousal from './Components/Carousal/CarousalNew'
 
 // Style
 const useStyles = makeStyles(theme => ({
@@ -21,8 +22,9 @@ function App() {
   const classes = useStyles()
 
   return (
-    <div className={ classes.container }>
-      <Calender />
+    <div className={ classes.container1 }>
+      {/* <Calender /> */}
+      <Carousal />
     </div>
   );
 }
