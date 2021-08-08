@@ -44,6 +44,7 @@ const FilterItem:React.FC<Props> = ( { item, handleOnClick } ) => {
             }}
             size='small'
             className={classes.button}
+            value='selected'
         >
             { item.label }
         </ToggleButton>
