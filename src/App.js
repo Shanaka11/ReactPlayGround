@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/styles'
 // Local Imports
 import Calender from './Components/Calender/Calnder'
 import Carousal from './Components/Carousal/CarousalNew'
+import Filter from './Components/TableFilter/TestContainer'
 
 // Style
 const useStyles = makeStyles(theme => ({
@@ -22,9 +23,10 @@ function App() {
   const classes = useStyles()
 
   return (
-    <div className={ classes.container1 }>
+    <div className={ classes.container }>
       {/* <Calender /> */}
-      <Carousal />
+      {/* <Carousal /> */}
+      <Filter />
     </div>
   );
 }
