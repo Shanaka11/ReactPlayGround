@@ -1,7 +1,10 @@
 // React Imports
 import React from 'react'
 // Material UI Imports
-import { Grid } from '@material-ui/core'
+import { 
+    Grid,
+    CircularProgress
+} from '@material-ui/core'
 // Local Imports
 import FilterItem from './FilterItem'
 
@@ -12,10 +15,11 @@ interface Props {
         label:string
     }[],
     filterString: string,
+    loading?: boolean,
     setFilterString: (filterString: string) => void
 }
 
-const Filter:React.FC<Props> = ( { data, filterString, setFilterString } ) => {
+const Filter:React.FC<Props> = ( { data, filterString, loading, setFilterString } ) => {
 
     // Methods
     const handleFilterItemOnClick = (id:number, selected:boolean) => {
@@ -46,6 +50,9 @@ const Filter:React.FC<Props> = ( { data, filterString, setFilterString } ) => {
     return (
         <Grid container spacing={1}>
             {
+                loading ?
+                <CircularProgress />
+                :
                 data.map((item) => (
                     <Grid item key={item.id}>
                         <FilterItem item={item} handleOnClick={handleFilterItemOnClick}/>
